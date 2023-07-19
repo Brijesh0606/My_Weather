@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">My Weather</string>
+    <string name="min_temperature">Min. Temperature</string>
+    <string name="max_temperature">Max. Temperature</string>
+    <string name="pressure">Pressure</string>
+    <string name="humidity">Humidity</string>
+    <string name="visibility">Visibility</string>
+    <string name="feels_like">Feels Like :</string>
+    <string name="temperature">Temperature :</string>
+    <string name="city_name">City Name</string>
+    <string name="enter_city_name">Enter City Name</string>
+    <string name="weather">Weather</string>
+    <string name="weather_condition_image">Weather Condition Image</string>
+    <string name="search_button">Search_button</string>
+</resources>
