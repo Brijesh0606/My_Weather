@@ -94,11 +94,28 @@ public class MainActivity extends AppCompatActivity {
 
                 String conditions = weatherObject.getString("main");
 
-                if(conditions.equals("Rain")){
-                    condition_img.setBackgroundResource(R.drawable.raining);
-                }
-                else if(conditions.equals("Clouds")){
-                    condition_img.setBackgroundResource(R.drawable.clouds);
+                switch (conditions) {
+                    case "Rain":
+                        condition_img.setBackgroundResource(R.drawable.raining);
+                        break;
+                    case "Clouds":
+                        condition_img.setBackgroundResource(R.drawable.clouds);
+                        break;
+                    case "Snow":
+                        condition_img.setBackgroundResource(R.drawable.snow);
+                        break;
+                    case "Clear":
+                        condition_img.setBackgroundResource(R.drawable.sun);
+                        break;
+                    case "Dust":
+                        condition_img.setBackgroundResource(R.drawable.sandstorm);
+                        break;
+                    case "Mist":
+                        condition_img.setBackgroundResource(R.drawable.mist);
+                        break;
+                    case "Haze":
+                        condition_img.setBackgroundResource(R.drawable.fog);
+                        break;
                 }
 
             } catch (JSONException e) {
