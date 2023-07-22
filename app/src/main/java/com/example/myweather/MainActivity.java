@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
             InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
             inputMethodManager.hideSoftInputFromWindow(v.getWindowToken(), 0);
             getdata(cityname);
+            et_cityname.setText("");
         });
     }
 
@@ -66,19 +67,19 @@ public class MainActivity extends AppCompatActivity {
 
                 String temperature = object.getString("temp");
                 double temp = Double.parseDouble(temperature)-273.15;
-                city_temp.setText(Double.toString(temp).substring(0,5)+" °C");
+                city_temp.setText((int)temp+" °C");
 
                 String feellike = object.getString("feels_like");
                 double feeltemp = Double.parseDouble(feellike)-273.15;
-                feel_like.setText(Double.toString(feeltemp).substring(0,5)+" °C");
+                feel_like.setText((int)feeltemp+" °C");
 
                 String mintemp = object.getString("temp_min");
                 double tempmin = Double.parseDouble(mintemp)-273.15;
-                min_temp.setText(Double.toString(tempmin).substring(0,5)+" °C");
+                min_temp.setText((int)tempmin+" °C");
 
                 String maxtemp = object.getString("temp_max");
                 double tempmax = Double.parseDouble(maxtemp)-273.15;
-                max_temp.setText(Double.toString(tempmax).substring(0,5)+" °C");
+                max_temp.setText((int)tempmax+" °C");
 
                 String pressurevalue = object.getString("pressure");
                 pressure.setText(pressurevalue+" mbar");
